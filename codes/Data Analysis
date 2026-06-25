@@ -1,18 +1,17 @@
-%% 1. VERİ YÜKLEME VE HAZIRLIK
-filename = 'live_muon_data3.csv'; % Dosya adının doğru olduğundan emin ol
+%% 1. VERİ YÜKLEME 
+filename = 'live_muon_data3.csv';
 data = readtable(filename);
 
-% Sütun isimlerini netleştirelim
+% Sütun isimleri
 event_id = data.event_no;
 zaman = data.time_s;
 voltaj = data.voltage_V;
 
 %% 2. MÜON AYIKLAMA (THRESHOLDING)
-% Müonlar plastik sintilatörde hızlı ve derin negatif voltaj düşüşleri yapar.
-% Gürültü (noise) -0.16V civarında görünüyor. 
+% Gürültü (noise) -1V civarında görünüyor. 
 threshold = -1.0; 
 
-% Her bir "Event" (olay) içindeki en düşük voltaj değerini bulalım
+% Her bir event içindeki en düşük voltaj değerini bulalım
 stats = groupsummary(data, 'event_no', 'min', 'voltage_V');
 muon_candidates = stats.event_no(stats.min_voltage_V < threshold);
 
@@ -87,7 +86,7 @@ for i = 1:length(muon_candidates)
     end
 end
 
-% Sıfır olan (hatalı okunan) değerleri filtrele
+% Sıfır olan değerleri filtrele
 valid_durations = pulse_durations(pulse_durations > 0);
 
 if ~isempty(valid_durations)
