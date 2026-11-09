@@ -1,0 +1,6 @@
+* 12_BESLEME_ACILISI_YAVAS - visible schematic and CIRCUIT_CORE have identical connectivity
+.include MODELS.inc
+.include NOISE_RECORDS.inc
+.include TEST_12_BESLEME_ACILISI_YAVAS.inc
+.include CIRCUIT_CORE.inc
+.end

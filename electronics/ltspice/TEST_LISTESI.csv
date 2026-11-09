@@ -1,0 +1,14 @@
+﻿dosya,test,kosul_sayisi,timestep,aciklama,calistirma_durumu
+00_ONCE_BUNU_AC.asc,Ilk kontrol: 30mV / 20ns / sinyal+ref 10mV RMS,1,10p,,LTspice Windows ile henuz calistirilmadi
+01_GENLIK_GENISLIK_10mV.asc,Ana tarama: 30mV...1V / 10...30ns / iki gurultu yolu,50,10p,"50 kosul; iki kanal ayni genlik/genislik, ilk olay ayni anda.",LTspice Windows ile henuz calistirilmadi
+02_GURULTUSUZ_KONTROL.asc,Gurultusuz genlik/genislik kontrolu,9,10p,Ana taramadan secilmis 9 kontrol; gecer/kacir ayirimi.,LTspice Windows ile henuz calistirilmadi
+03_GECIKME_TARAMA.asc,Iki PMT arasinda gecikme; dar ve genis kaynak,30,10p,Gecikme kabulunu olcer; gurultude false coincidence da mumkun.,LTspice Windows ile henuz calistirilmadi
+04_IKINCI_PMT_YARI_GENLIK.asc,Zayif PMT2: genlik oranı 1/2,15,10p,AMP 60m iken PMT2 30m: iki kanal genlikleri 30mV...1V araliginda kalir.,LTspice Windows ile henuz calistirilmadi
+05_TEK_PMT_VE_BOS.asc,Bos / yalniz PMT1 / yalniz PMT2,3,10p,"MODE0: iki PMT atmasi yok, iki sinyal ve iki ref gurultusu aktif.",LTspice Windows ile henuz calistirilmadi
+06_YAKIN_ATMA_VE_OLU_ZAMAN.asc,Ayni PMT ve cift coincidence olayi icin iki yakin atma,16,10p,PAIR_MODE0: PMT1 iki darbe; MODE1: iki kanalda eszamanli iki olay. Yeni STM kenari sayilmali.,LTspice Windows ile henuz calistirilmadi
+07_GURULTU_KAYNAGINI_AYIR.asc,Gurultunun geldigi yeri ayir,6,10p,0 temiz; 1 sinyal; 2 ref pini; 3 ikisi; 4 iki ref ortak gurultu; 5 sinyal+ref FILTRE GIRISI gurultusu.,LTspice Windows ile henuz calistirilmadi
+08_BES_FARKLI_GURULTU_KAYDI.asc,Bes bagimsiz tohumla ayni zayif olay,5,10p,PWL kayitlari sabit ve yeniden uretilebilir; tum olasiliklarin garantisi degil.,LTspice Windows ile henuz calistirilmadi
+09_KARSILASTIRICI_OFFSET.asc,Iki TLV icin bagimsiz offset,9,10p,VOFFSET test kaynagidir; TI dosyasinin ic parametreleri degistirilmedi.,LTspice Windows ile henuz calistirilmadi
+10_ESIK_TRIM_TARAMA.asc,Iki kanal icin birlikte esik trim tarama,6,10p,Sabit AMP ve gurultude esik farki/kayip/false olay iliskisi. Minimum 1mOhm sayisal sifir-direnc sorununu onler.,LTspice Windows ile henuz calistirilmadi
+11_CIKIS_YUKU_VE_PARAZIT.asc,AND cikis yuku ve uzun-darbe parazit kapasitesi,12,10p,Parazitler cihaz/paket/prob/layout duyarliligi icindir; fiziksel ek kondansator listesi degil.,LTspice Windows ile henuz calistirilmadi
+12_BESLEME_ACILISI_YAVAS.asc,Opsiyonel DC acilis testi; ns darbe testi degil,1,2u,Sadece yavas bias ve besleme yerlesmesi. Hizli testlerin 10ps adimi degistirilmedi.,LTspice Windows ile henuz calistirilmadi

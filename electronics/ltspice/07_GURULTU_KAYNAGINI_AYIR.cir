@@ -1,0 +1,6 @@
+* 07_GURULTU_KAYNAGINI_AYIR - visible schematic and CIRCUIT_CORE have identical connectivity
+.include MODELS.inc
+.include NOISE_RECORDS.inc
+.include TEST_07_GURULTU_KAYNAGINI_AYIR.inc
+.include CIRCUIT_CORE.inc
+.end

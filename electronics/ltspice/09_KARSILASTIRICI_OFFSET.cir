@@ -1,0 +1,6 @@
+* 09_KARSILASTIRICI_OFFSET - visible schematic and CIRCUIT_CORE have identical connectivity
+.include MODELS.inc
+.include NOISE_RECORDS.inc
+.include TEST_09_KARSILASTIRICI_OFFSET.inc
+.include CIRCUIT_CORE.inc
+.end

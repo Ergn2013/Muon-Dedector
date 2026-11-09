@@ -1,0 +1,6 @@
+* 06_YAKIN_ATMA_VE_OLU_ZAMAN - visible schematic and CIRCUIT_CORE have identical connectivity
+.include MODELS.inc
+.include NOISE_RECORDS.inc
+.include TEST_06_YAKIN_ATMA_VE_OLU_ZAMAN.inc
+.include CIRCUIT_CORE.inc
+.end

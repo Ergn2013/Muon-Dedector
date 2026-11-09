@@ -1,0 +1,6 @@
+* 00_ONCE_BUNU_AC - visible schematic and CIRCUIT_CORE have identical connectivity
+.include MODELS.inc
+.include NOISE_RECORDS.inc
+.include TEST_00_ONCE_BUNU_AC.inc
+.include CIRCUIT_CORE.inc
+.end

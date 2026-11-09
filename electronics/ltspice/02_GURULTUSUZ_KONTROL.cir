@@ -1,0 +1,6 @@
+* 02_GURULTUSUZ_KONTROL - visible schematic and CIRCUIT_CORE have identical connectivity
+.include MODELS.inc
+.include NOISE_RECORDS.inc
+.include TEST_02_GURULTUSUZ_KONTROL.inc
+.include CIRCUIT_CORE.inc
+.end

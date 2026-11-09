@@ -1,0 +1,677 @@
+[
+  {
+    "stem": "00_ONCE_BUNU_AC",
+    "title": "Ilk kontrol: 30mV / 20ns / sinyal+ref 10mV RMS",
+    "params": {
+      "AMP": "30m",
+      "PW_NS": "20",
+      "RATIO2": "1",
+      "DELAY_NS": "0",
+      "PAIR_NS": "500",
+      "SECOND": "0",
+      "ON1": "1",
+      "ON2": "1",
+      "N_SIG": "10m",
+      "N_REF": "10m",
+      "N_UP": "0",
+      "REF_COMMON": "0",
+      "NSEED": "1",
+      "RTH1": "50",
+      "RTH2": "50",
+      "VOS1": "0",
+      "VOS2": "0",
+      "RATT_VAL": "100",
+      "RCL_BOT": "1k",
+      "C_AND_LOAD": "10p",
+      "C_HOLD_PAR": "4p",
+      "VIN_NOM": "5.6",
+      "T0": "1u",
+      "TSTOP": "3u",
+      "TMAX": "10p",
+      "K50": "{(50+49.9)/49.9}",
+      "RNPORT": "{50*49.9/(50+49.9)}"
+    },
+    "steps": [],
+    "cases": 1,
+    "note": "",
+    "startup": false
+  },
+  {
+    "stem": "01_GENLIK_GENISLIK_10mV",
+    "title": "Ana tarama: 30mV...1V / 10...30ns / iki gurultu yolu",
+    "params": {
+      "AMP": "30m",
+      "PW_NS": "20",
+      "RATIO2": "1",
+      "DELAY_NS": "0",
+      "PAIR_NS": "500",
+      "SECOND": "0",
+      "ON1": "1",
+      "ON2": "1",
+      "N_SIG": "10m",
+      "N_REF": "10m",
+      "N_UP": "0",
+      "REF_COMMON": "0",
+      "NSEED": "1",
+      "RTH1": "50",
+      "RTH2": "50",
+      "VOS1": "0",
+      "VOS2": "0",
+      "RATT_VAL": "100",
+      "RCL_BOT": "1k",
+      "C_AND_LOAD": "10p",
+      "C_HOLD_PAR": "4p",
+      "VIN_NOM": "5.6",
+      "T0": "1u",
+      "TSTOP": "3u",
+      "TMAX": "10p",
+      "K50": "{(50+49.9)/49.9}",
+      "RNPORT": "{50*49.9/(50+49.9)}"
+    },
+    "steps": [
+      [
+        "AMP",
+        [
+          "30m",
+          "50m",
+          "75m",
+          "100m",
+          "150m",
+          "200m",
+          "300m",
+          "500m",
+          "750m",
+          "1"
+        ]
+      ],
+      [
+        "PW_NS",
+        [
+          "10",
+          "15",
+          "20",
+          "25",
+          "30"
+        ]
+      ]
+    ],
+    "cases": 50,
+    "note": "50 kosul; iki kanal ayni genlik/genislik, ilk olay ayni anda.",
+    "startup": false
+  },
+  {
+    "stem": "02_GURULTUSUZ_KONTROL",
+    "title": "Gurultusuz genlik/genislik kontrolu",
+    "params": {
+      "AMP": "30m",
+      "PW_NS": "20",
+      "RATIO2": "1",
+      "DELAY_NS": "0",
+      "PAIR_NS": "500",
+      "SECOND": "0",
+      "ON1": "1",
+      "ON2": "1",
+      "N_SIG": "0",
+      "N_REF": "0",
+      "N_UP": "0",
+      "REF_COMMON": "0",
+      "NSEED": "1",
+      "RTH1": "50",
+      "RTH2": "50",
+      "VOS1": "0",
+      "VOS2": "0",
+      "RATT_VAL": "100",
+      "RCL_BOT": "1k",
+      "C_AND_LOAD": "10p",
+      "C_HOLD_PAR": "4p",
+      "VIN_NOM": "5.6",
+      "T0": "1u",
+      "TSTOP": "3u",
+      "TMAX": "10p",
+      "K50": "{(50+49.9)/49.9}",
+      "RNPORT": "{50*49.9/(50+49.9)}"
+    },
+    "steps": [
+      [
+        "AMP",
+        [
+          "30m",
+          "100m",
+          "1"
+        ]
+      ],
+      [
+        "PW_NS",
+        [
+          "10",
+          "20",
+          "30"
+        ]
+      ]
+    ],
+    "cases": 9,
+    "note": "Ana taramadan secilmis 9 kontrol; gecer/kacir ayirimi.",
+    "startup": false
+  },
+  {
+    "stem": "03_GECIKME_TARAMA",
+    "title": "Iki PMT arasinda gecikme; dar ve genis kaynak",
+    "params": {
+      "AMP": "100m",
+      "PW_NS": "20",
+      "RATIO2": "1",
+      "DELAY_NS": "0",
+      "PAIR_NS": "500",
+      "SECOND": "0",
+      "ON1": "1",
+      "ON2": "1",
+      "N_SIG": "10m",
+      "N_REF": "10m",
+      "N_UP": "0",
+      "REF_COMMON": "0",
+      "NSEED": "1",
+      "RTH1": "50",
+      "RTH2": "50",
+      "VOS1": "0",
+      "VOS2": "0",
+      "RATT_VAL": "100",
+      "RCL_BOT": "1k",
+      "C_AND_LOAD": "10p",
+      "C_HOLD_PAR": "4p",
+      "VIN_NOM": "5.6",
+      "T0": "1u",
+      "TSTOP": "3u",
+      "TMAX": "10p",
+      "K50": "{(50+49.9)/49.9}",
+      "RNPORT": "{50*49.9/(50+49.9)}"
+    },
+    "steps": [
+      [
+        "DELAY_NS",
+        [
+          "-200",
+          "-100",
+          "-50",
+          "-30",
+          "-20",
+          "-10",
+          "-5",
+          "0",
+          "5",
+          "10",
+          "20",
+          "30",
+          "50",
+          "100",
+          "200"
+        ]
+      ],
+      [
+        "PW_NS",
+        [
+          "10",
+          "30"
+        ]
+      ]
+    ],
+    "cases": 30,
+    "note": "Gecikme kabulunu olcer; gurultude false coincidence da mumkun.",
+    "startup": false
+  },
+  {
+    "stem": "04_IKINCI_PMT_YARI_GENLIK",
+    "title": "Zayif PMT2: genlik oranı 1/2",
+    "params": {
+      "AMP": "30m",
+      "PW_NS": "20",
+      "RATIO2": ".5",
+      "DELAY_NS": "0",
+      "PAIR_NS": "500",
+      "SECOND": "0",
+      "ON1": "1",
+      "ON2": "1",
+      "N_SIG": "10m",
+      "N_REF": "10m",
+      "N_UP": "0",
+      "REF_COMMON": "0",
+      "NSEED": "1",
+      "RTH1": "50",
+      "RTH2": "50",
+      "VOS1": "0",
+      "VOS2": "0",
+      "RATT_VAL": "100",
+      "RCL_BOT": "1k",
+      "C_AND_LOAD": "10p",
+      "C_HOLD_PAR": "4p",
+      "VIN_NOM": "5.6",
+      "T0": "1u",
+      "TSTOP": "3u",
+      "TMAX": "10p",
+      "K50": "{(50+49.9)/49.9}",
+      "RNPORT": "{50*49.9/(50+49.9)}"
+    },
+    "steps": [
+      [
+        "AMP",
+        [
+          "60m",
+          "100m",
+          "200m",
+          "500m",
+          "1"
+        ]
+      ],
+      [
+        "PW_NS",
+        [
+          "10",
+          "20",
+          "30"
+        ]
+      ]
+    ],
+    "cases": 15,
+    "note": "AMP 60m iken PMT2 30m: iki kanal genlikleri 30mV...1V araliginda kalir.",
+    "startup": false
+  },
+  {
+    "stem": "05_TEK_PMT_VE_BOS",
+    "title": "Bos / yalniz PMT1 / yalniz PMT2",
+    "params": {
+      "AMP": "100m",
+      "PW_NS": "20",
+      "RATIO2": "1",
+      "DELAY_NS": "0",
+      "PAIR_NS": "500",
+      "SECOND": "0",
+      "ON1": "{if(MODE==1,1,0)}",
+      "ON2": "{if(MODE==2,1,0)}",
+      "N_SIG": "10m",
+      "N_REF": "10m",
+      "N_UP": "0",
+      "REF_COMMON": "0",
+      "NSEED": "1",
+      "RTH1": "50",
+      "RTH2": "50",
+      "VOS1": "0",
+      "VOS2": "0",
+      "RATT_VAL": "100",
+      "RCL_BOT": "1k",
+      "C_AND_LOAD": "10p",
+      "C_HOLD_PAR": "4p",
+      "VIN_NOM": "5.6",
+      "T0": "1u",
+      "TSTOP": "3u",
+      "TMAX": "10p",
+      "K50": "{(50+49.9)/49.9}",
+      "RNPORT": "{50*49.9/(50+49.9)}",
+      "MODE": "0"
+    },
+    "steps": [
+      [
+        "MODE",
+        [
+          "0",
+          "1",
+          "2"
+        ]
+      ]
+    ],
+    "cases": 3,
+    "note": "MODE0: iki PMT atmasi yok, iki sinyal ve iki ref gurultusu aktif.",
+    "startup": false
+  },
+  {
+    "stem": "06_YAKIN_ATMA_VE_OLU_ZAMAN",
+    "title": "Ayni PMT ve cift coincidence olayi icin iki yakin atma",
+    "params": {
+      "AMP": "100m",
+      "PW_NS": "20",
+      "RATIO2": "1",
+      "DELAY_NS": "0",
+      "PAIR_NS": "500",
+      "SECOND": "1",
+      "ON1": "1",
+      "ON2": "{PAIR_MODE}",
+      "N_SIG": "10m",
+      "N_REF": "10m",
+      "N_UP": "0",
+      "REF_COMMON": "0",
+      "NSEED": "1",
+      "RTH1": "50",
+      "RTH2": "50",
+      "VOS1": "0",
+      "VOS2": "0",
+      "RATT_VAL": "100",
+      "RCL_BOT": "1k",
+      "C_AND_LOAD": "10p",
+      "C_HOLD_PAR": "4p",
+      "VIN_NOM": "5.6",
+      "T0": "1u",
+      "TSTOP": "6u",
+      "TMAX": "10p",
+      "K50": "{(50+49.9)/49.9}",
+      "RNPORT": "{50*49.9/(50+49.9)}",
+      "PAIR_MODE": "0"
+    },
+    "steps": [
+      [
+        "PAIR_NS",
+        [
+          "20",
+          "50",
+          "100",
+          "200",
+          "500",
+          "1000",
+          "1500",
+          "2500"
+        ]
+      ],
+      [
+        "PAIR_MODE",
+        [
+          "0",
+          "1"
+        ]
+      ]
+    ],
+    "cases": 16,
+    "note": "PAIR_MODE0: PMT1 iki darbe; MODE1: iki kanalda eszamanli iki olay. Yeni STM kenari sayilmali.",
+    "startup": false
+  },
+  {
+    "stem": "07_GURULTU_KAYNAGINI_AYIR",
+    "title": "Gurultunun geldigi yeri ayir",
+    "params": {
+      "AMP": "30m",
+      "PW_NS": "10",
+      "RATIO2": "1",
+      "DELAY_NS": "0",
+      "PAIR_NS": "500",
+      "SECOND": "0",
+      "ON1": "1",
+      "ON2": "1",
+      "N_SIG": "{if(MODE==0,0,if(MODE==2,0,10m))}",
+      "N_REF": "{if(MODE==2,10m,if(MODE==3,10m,if(MODE==4,10m,0)))}",
+      "N_UP": "{if(MODE==5,10m,0)}",
+      "REF_COMMON": "{if(MODE==4,1,0)}",
+      "NSEED": "1",
+      "RTH1": "50",
+      "RTH2": "50",
+      "VOS1": "0",
+      "VOS2": "0",
+      "RATT_VAL": "100",
+      "RCL_BOT": "1k",
+      "C_AND_LOAD": "10p",
+      "C_HOLD_PAR": "4p",
+      "VIN_NOM": "5.6",
+      "T0": "1u",
+      "TSTOP": "3u",
+      "TMAX": "10p",
+      "K50": "{(50+49.9)/49.9}",
+      "RNPORT": "{50*49.9/(50+49.9)}",
+      "MODE": "0"
+    },
+    "steps": [
+      [
+        "MODE",
+        [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ]
+      ]
+    ],
+    "cases": 6,
+    "note": "0 temiz; 1 sinyal; 2 ref pini; 3 ikisi; 4 iki ref ortak gurultu; 5 sinyal+ref FILTRE GIRISI gurultusu.",
+    "startup": false
+  },
+  {
+    "stem": "08_BES_FARKLI_GURULTU_KAYDI",
+    "title": "Bes bagimsiz tohumla ayni zayif olay",
+    "params": {
+      "AMP": "30m",
+      "PW_NS": "10",
+      "RATIO2": "1",
+      "DELAY_NS": "0",
+      "PAIR_NS": "500",
+      "SECOND": "0",
+      "ON1": "1",
+      "ON2": "1",
+      "N_SIG": "10m",
+      "N_REF": "10m",
+      "N_UP": "0",
+      "REF_COMMON": "0",
+      "NSEED": "1",
+      "RTH1": "50",
+      "RTH2": "50",
+      "VOS1": "0",
+      "VOS2": "0",
+      "RATT_VAL": "100",
+      "RCL_BOT": "1k",
+      "C_AND_LOAD": "10p",
+      "C_HOLD_PAR": "4p",
+      "VIN_NOM": "5.6",
+      "T0": "1u",
+      "TSTOP": "3u",
+      "TMAX": "10p",
+      "K50": "{(50+49.9)/49.9}",
+      "RNPORT": "{50*49.9/(50+49.9)}"
+    },
+    "steps": [
+      [
+        "NSEED",
+        [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ]
+      ]
+    ],
+    "cases": 5,
+    "note": "PWL kayitlari sabit ve yeniden uretilebilir; tum olasiliklarin garantisi degil.",
+    "startup": false
+  },
+  {
+    "stem": "09_KARSILASTIRICI_OFFSET",
+    "title": "Iki TLV icin bagimsiz offset",
+    "params": {
+      "AMP": "30m",
+      "PW_NS": "10",
+      "RATIO2": "1",
+      "DELAY_NS": "0",
+      "PAIR_NS": "500",
+      "SECOND": "0",
+      "ON1": "1",
+      "ON2": "1",
+      "N_SIG": "10m",
+      "N_REF": "10m",
+      "N_UP": "0",
+      "REF_COMMON": "0",
+      "NSEED": "1",
+      "RTH1": "50",
+      "RTH2": "50",
+      "VOS1": "0",
+      "VOS2": "0",
+      "RATT_VAL": "100",
+      "RCL_BOT": "1k",
+      "C_AND_LOAD": "10p",
+      "C_HOLD_PAR": "4p",
+      "VIN_NOM": "5.6",
+      "T0": "1u",
+      "TSTOP": "3u",
+      "TMAX": "10p",
+      "K50": "{(50+49.9)/49.9}",
+      "RNPORT": "{50*49.9/(50+49.9)}"
+    },
+    "steps": [
+      [
+        "VOS1",
+        [
+          "-5m",
+          "0",
+          "5m"
+        ]
+      ],
+      [
+        "VOS2",
+        [
+          "-5m",
+          "0",
+          "5m"
+        ]
+      ]
+    ],
+    "cases": 9,
+    "note": "VOFFSET test kaynagidir; TI dosyasinin ic parametreleri degistirilmedi.",
+    "startup": false
+  },
+  {
+    "stem": "10_ESIK_TRIM_TARAMA",
+    "title": "Iki kanal icin birlikte esik trim tarama",
+    "params": {
+      "AMP": "30m",
+      "PW_NS": "10",
+      "RATIO2": "1",
+      "DELAY_NS": "0",
+      "PAIR_NS": "500",
+      "SECOND": "0",
+      "ON1": "1",
+      "ON2": "1",
+      "N_SIG": "10m",
+      "N_REF": "10m",
+      "N_UP": "0",
+      "REF_COMMON": "0",
+      "NSEED": "1",
+      "RTH1": "{RTH}",
+      "RTH2": "{RTH}",
+      "VOS1": "0",
+      "VOS2": "0",
+      "RATT_VAL": "100",
+      "RCL_BOT": "1k",
+      "C_AND_LOAD": "10p",
+      "C_HOLD_PAR": "4p",
+      "VIN_NOM": "5.6",
+      "T0": "1u",
+      "TSTOP": "3u",
+      "TMAX": "10p",
+      "K50": "{(50+49.9)/49.9}",
+      "RNPORT": "{50*49.9/(50+49.9)}",
+      "RTH": "50"
+    },
+    "steps": [
+      [
+        "RTH",
+        [
+          "1m",
+          "25",
+          "50",
+          "75",
+          "100",
+          "150"
+        ]
+      ]
+    ],
+    "cases": 6,
+    "note": "Sabit AMP ve gurultude esik farki/kayip/false olay iliskisi. Minimum 1mOhm sayisal sifir-direnc sorununu onler.",
+    "startup": false
+  },
+  {
+    "stem": "11_CIKIS_YUKU_VE_PARAZIT",
+    "title": "AND cikis yuku ve uzun-darbe parazit kapasitesi",
+    "params": {
+      "AMP": "30m",
+      "PW_NS": "10",
+      "RATIO2": "1",
+      "DELAY_NS": "0",
+      "PAIR_NS": "500",
+      "SECOND": "0",
+      "ON1": "1",
+      "ON2": "1",
+      "N_SIG": "10m",
+      "N_REF": "10m",
+      "N_UP": "0",
+      "REF_COMMON": "0",
+      "NSEED": "1",
+      "RTH1": "50",
+      "RTH2": "50",
+      "VOS1": "0",
+      "VOS2": "0",
+      "RATT_VAL": "100",
+      "RCL_BOT": "1k",
+      "C_AND_LOAD": "10p",
+      "C_HOLD_PAR": "4p",
+      "VIN_NOM": "5.6",
+      "T0": "1u",
+      "TSTOP": "3u",
+      "TMAX": "10p",
+      "K50": "{(50+49.9)/49.9}",
+      "RNPORT": "{50*49.9/(50+49.9)}"
+    },
+    "steps": [
+      [
+        "C_AND_LOAD",
+        [
+          "5p",
+          "10p",
+          "15p"
+        ]
+      ],
+      [
+        "C_HOLD_PAR",
+        [
+          "1p",
+          "4p",
+          "8p",
+          "12p"
+        ]
+      ]
+    ],
+    "cases": 12,
+    "note": "Parazitler cihaz/paket/prob/layout duyarliligi icindir; fiziksel ek kondansator listesi degil.",
+    "startup": false
+  },
+  {
+    "stem": "12_BESLEME_ACILISI_YAVAS",
+    "title": "Opsiyonel DC acilis testi; ns darbe testi degil",
+    "params": {
+      "AMP": "30m",
+      "PW_NS": "20",
+      "RATIO2": "1",
+      "DELAY_NS": "0",
+      "PAIR_NS": "500",
+      "SECOND": "0",
+      "ON1": "0",
+      "ON2": "0",
+      "N_SIG": "0",
+      "N_REF": "0",
+      "N_UP": "0",
+      "REF_COMMON": "0",
+      "NSEED": "1",
+      "RTH1": "50",
+      "RTH2": "50",
+      "VOS1": "0",
+      "VOS2": "0",
+      "RATT_VAL": "100",
+      "RCL_BOT": "1k",
+      "C_AND_LOAD": "10p",
+      "C_HOLD_PAR": "4p",
+      "VIN_NOM": "5.6",
+      "T0": "1u",
+      "TSTOP": "80m",
+      "TMAX": "2u",
+      "K50": "{(50+49.9)/49.9}",
+      "RNPORT": "{50*49.9/(50+49.9)}"
+    },
+    "steps": [],
+    "cases": 1,
+    "note": "Sadece yavas bias ve besleme yerlesmesi. Hizli testlerin 10ps adimi degistirilmedi.",
+    "startup": true
+  }
+]

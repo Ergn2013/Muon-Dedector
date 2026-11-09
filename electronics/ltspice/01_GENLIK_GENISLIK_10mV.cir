@@ -1,0 +1,6 @@
+* 01_GENLIK_GENISLIK_10mV - visible schematic and CIRCUIT_CORE have identical connectivity
+.include MODELS.inc
+.include NOISE_RECORDS.inc
+.include TEST_01_GENLIK_GENISLIK_10mV.inc
+.include CIRCUIT_CORE.inc
+.end
