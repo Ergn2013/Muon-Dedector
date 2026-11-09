@@ -21,10 +21,10 @@ Each PMT channel feeds a TLV3601 discriminator and an SN74LVC2G17 Schmitt-trigge
 
 | Test | Input |
 | --- | --- |
-| [Quick start](testbench/00_ONCE_BUNU_AC.asc) | One coincident event with a 30 mV nominal negative pulse per channel, 20 ns FWHM and nominal 10 mV RMS noise on signal and comparator reference |
-| [Amplitude and width](testbench/01_GENLIK_GENISLIK_10mV.asc) | 30 mV to 1 V and 10 to 30 ns FWHM |
-| [Channel delay](testbench/03_GECIKME_TARAMA.asc) | Relative pulse delay between the two PMTs |
-| [Singles and noise-only](testbench/05_TEK_PMT_VE_BOS.asc) | One channel pulsed at a time and a noise-only case |
+| [Quick start](testbench/00_quick_start.asc) | One coincident event with a 30 mV nominal negative pulse per channel, 20 ns FWHM and nominal 10 mV RMS noise on signal and comparator reference |
+| [Amplitude and width](testbench/01_amplitude_width_sweep.asc) | 30 mV to 1 V and 10 to 30 ns FWHM |
+| [Channel delay](testbench/03_channel_delay_sweep.asc) | Relative pulse delay between the two PMTs |
+| [Singles and noise-only](testbench/05_single_channel_and_noise_only.asc) | One channel pulsed at a time and a noise-only case |
 
 The tests use synthetic inputs and model the STM32 connections as electrical loads. To count threshold crossings in the generated LTspice output, run `python TOOLS/analyze_outputs.py` from `testbench/`.
 
