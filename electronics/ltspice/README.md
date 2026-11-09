@@ -1,23 +1,31 @@
-# TLV3601 coincidence electronics
+# Coincidence electronics
 
-This LTspice package uses two TLV3601 comparators, SN74LVC2G17 Schmitt-trigger buffers, and an SN74LVC1G08 AND gate. The two AND inputs are the buffered channel signals `CH1_PS` and `CH2_PS`. The post-gate and singles paths stretch pulses for the intended STM32 inputs.
+Each PMT channel feeds a TLV3601 discriminator and an SN74LVC2G17 Schmitt-trigger buffer. The buffered signals (`CH1_PS`, `CH2_PS`) feed an SN74LVC1G08 AND gate. Pulse stretching provides two singles outputs and one coincidence output for the planned STM32 readout.
 
-[View the schematic preview](SEMA_ONIZLEME.svg) · [Original test notes in Turkish](README_ILK_OKU.md)
+[View the schematic](schematic.svg)
 
-## Run the first test
+## Run in LTspice
 
-1. Keep this folder intact, including the local symbols, include files and `NOISE/` folder.
-2. Obtain the following Texas Instruments model files and place them next to the schematic. The model filenames are used by `MODELS.inc`.
+1. Keep the [testbench folder](testbench/) together. It contains the schematics, local symbols, include files and synthetic PWL noise inputs.
+2. Place the three TI model files below in `testbench/`, next to the schematics. You can also use the files from the original Rev AG package.
 
-   | Required file | TI download |
+   | Local filename | TI download |
    | --- | --- |
    | `tlv3601.lib` | [TLV3601 TINA-TI Model, SNOM713A](https://www.ti.com/product/TLV3601#design-tools-simulation) |
    | `SN74LVC2G17.cir` | [SN74LVC2G17 Behavioral SPICE Model, SCEM615](https://www.ti.com/product/SN74LVC2G17#design-tools-simulation) |
    | `SN74LVC1G08.cir` | [SN74LVC1G08 Behavioral SPICE Model, SCEM642](https://www.ti.com/product/SN74LVC1G08#design-tools-simulation) |
 
-   The original Rev AG files can also be copied into this folder. TI's TLV3601 download contains a TINA schematic and a `.TSM` macro. To obtain the SPICE text, open the schematic in TINA, open the TLV3601 macro's properties, select **Enter Macro**, and save the macro netlist as `tlv3601.lib`. [MODEL_KONTROLU.csv](MODEL_KONTROLU.csv) records the hashes of the model files used to assemble this test package.
+   For the TLV3601 TINA download, open the schematic in TINA, choose **Enter Macro** in the comparator's properties and save the SPICE netlist as `tlv3601.lib`.
 
-3. Open [00_ONCE_BUNU_AC.asc](00_ONCE_BUNU_AC.asc) in LTspice and select **Run**. This case uses a 30 mV nominal negative pulse with 20 ns FWHM and nominal 10 mV RMS noise on the signal and comparator reference. Examine `CH1_PS`, `CH2_PS`, `COINC_FAST` and `STM_COINC` to trace how the pulse moves through the circuit.
-4. For the main amplitude and width sweep, open [01_GENLIK_GENISLIK_10mV.asc](01_GENLIK_GENISLIK_10mV.asc). Each schematic has a corresponding `.cir` entry point for a netlist-based run. [TEST_LISTESI.csv](TEST_LISTESI.csv) indexes the cases.
+3. Open a test below and select **Run**. For the signal path, inspect `CH1_PS`, `CH2_PS`, `COINC_FAST` and `STM_COINC`.
 
-The additional cases explore channel delay, asymmetric amplitudes, singles, noise sources, comparator offsets and output loading. The PWL records are synthetic simulation inputs. To summarize simulated edge counts after generating the LTspice outputs, run `python TOOLS/analyze_outputs.py` from this directory. The count threshold is an analysis setting. The simulated STM32 loads represent electrical inputs.
+| Test | Input |
+| --- | --- |
+| [Quick start](testbench/00_ONCE_BUNU_AC.asc) | One coincident event with a 30 mV nominal negative pulse per channel, 20 ns FWHM and nominal 10 mV RMS noise on signal and comparator reference |
+| [Amplitude and width](testbench/01_GENLIK_GENISLIK_10mV.asc) | 30 mV to 1 V and 10 to 30 ns FWHM |
+| [Channel delay](testbench/03_GECIKME_TARAMA.asc) | Relative pulse delay between the two PMTs |
+| [Singles and noise-only](testbench/05_TEK_PMT_VE_BOS.asc) | One channel pulsed at a time and a noise-only case |
+
+The tests use synthetic inputs and model the STM32 connections as electrical loads. To count threshold crossings in the generated LTspice output, run `python TOOLS/analyze_outputs.py` from `testbench/`.
+
+[Full development test set in Git history](https://github.com/Ergn2013/Muon-Dedector/tree/ba4f7d2715aff6d7d7e44ef1ddcb9fbe6d40304d/electronics/ltspice)

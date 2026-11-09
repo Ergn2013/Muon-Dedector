@@ -1,6 +1,0 @@
-* 10_ESIK_TRIM_TARAMA - visible schematic and CIRCUIT_CORE have identical connectivity
-.include MODELS.inc
-.include NOISE_RECORDS.inc
-.include TEST_10_ESIK_TRIM_TARAMA.inc
-.include CIRCUIT_CORE.inc
-.end

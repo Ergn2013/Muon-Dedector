@@ -1,6 +1,0 @@
-* 05_TEK_PMT_VE_BOS - visible schematic and CIRCUIT_CORE have identical connectivity
-.include MODELS.inc
-.include NOISE_RECORDS.inc
-.include TEST_05_TEK_PMT_VE_BOS.inc
-.include CIRCUIT_CORE.inc
-.end

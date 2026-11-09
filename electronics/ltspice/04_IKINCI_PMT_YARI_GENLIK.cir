@@ -1,6 +1,0 @@
-* 04_IKINCI_PMT_YARI_GENLIK - visible schematic and CIRCUIT_CORE have identical connectivity
-.include MODELS.inc
-.include NOISE_RECORDS.inc
-.include TEST_04_IKINCI_PMT_YARI_GENLIK.inc
-.include CIRCUIT_CORE.inc
-.end

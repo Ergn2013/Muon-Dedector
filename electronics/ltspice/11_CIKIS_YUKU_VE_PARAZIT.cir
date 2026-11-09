@@ -1,6 +1,0 @@
-* 11_CIKIS_YUKU_VE_PARAZIT - visible schematic and CIRCUIT_CORE have identical connectivity
-.include MODELS.inc
-.include NOISE_RECORDS.inc
-.include TEST_11_CIKIS_YUKU_VE_PARAZIT.inc
-.include CIRCUIT_CORE.inc
-.end

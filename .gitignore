@@ -1,14 +1,14 @@
 # Generated LTspice outputs
-electronics/ltspice/*.raw
-electronics/ltspice/*.log
-electronics/ltspice/*.net
-electronics/ltspice/SAYIM_SONUCLARI.csv
-electronics/ltspice/SAYIM_SONUCLARI.json
+electronics/ltspice/testbench/*.raw
+electronics/ltspice/testbench/*.log
+electronics/ltspice/testbench/*.net
+electronics/ltspice/testbench/SAYIM_SONUCLARI.csv
+electronics/ltspice/testbench/SAYIM_SONUCLARI.json
 
 # Vendor models installed locally
-electronics/ltspice/tlv3601.lib
-electronics/ltspice/SN74LVC2G17.cir
-electronics/ltspice/SN74LVC1G08.cir
+electronics/ltspice/testbench/tlv3601.lib
+electronics/ltspice/testbench/SN74LVC2G17.cir
+electronics/ltspice/testbench/SN74LVC1G08.cir
 
 # Geant4 build trees
 simulation/geant4/build*/

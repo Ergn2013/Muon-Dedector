@@ -1,6 +1,0 @@
-* 08_BES_FARKLI_GURULTU_KAYDI - visible schematic and CIRCUIT_CORE have identical connectivity
-.include MODELS.inc
-.include NOISE_RECORDS.inc
-.include TEST_08_BES_FARKLI_GURULTU_KAYDI.inc
-.include CIRCUIT_CORE.inc
-.end
