@@ -6,6 +6,7 @@ A two-channel cosmic-ray muon detector prototype developed at Middle East Techni
 | --- | --- |
 | [Electronics](electronics/ltspice/README.md) | [Schematic preview](electronics/ltspice/schematic.svg), LTspice setup and four focused test benches |
 | [Mechanics](mechanical/README.md) | SolidWorks assembly, revised parts and 3D-print files |
+| [Oscilloscope measurements](measurements/oscilloscope/README.md) | Four paired waveform exports and selected bench captures |
 | [Acquisition and analysis](software/README.md) | Early oscilloscope capture and pulse analysis scripts |
 | [Geant4 simulation](simulation/geant4/README.md) | Build and run the optical detector model, or browse the [50,000-event simulation](simulation/geant4/results/run-2026-11-13/README.md) |
 

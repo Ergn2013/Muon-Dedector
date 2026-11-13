@@ -17,7 +17,7 @@ cmake --build build --parallel
 python3 collect_muon_data.py --binary ./build/exampleB1 --events 1000 --jobs 2
 ```
 
-For the example run configuration, use `--events 50000 --jobs 12 --threshold 100 --waveforms 5 --seeds 12345 67890`. The script runs each Geant4 process in serial mode with its own seed pair and output directory, then combines the event records and generates plots. See the run's `workers.csv` for individual seed pairs and event ranges.
+For the example run configuration, use `--events 50000 --jobs 12 --threshold 100 --waveforms 5 --seeds 12345 67890`. The script runs each Geant4 process in serial mode with its own seed pair and output directory, then combines the event records and generates plots. See the [worker manifest](results/run-2026-11-13/workers.csv) for individual seed pairs and event ranges.
 
 The script writes event-level CSV, a counting summary with Wilson intervals, a threshold scan, optical timing summaries and PNG figures under `runs/`. For an existing run, regenerate plots with `python3 collect_muon_data.py --analyze PATH_TO_RUN`.
 

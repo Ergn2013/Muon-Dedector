@@ -1,0 +1,8 @@
+Combined Geant4 run
+Worker processes: 12
+Number of events: 50000
+Voltage threshold: 100 mV
+Det1 PMT voltage hit events: 2459
+Det2 PMT voltage hit events: 1774
+PMT voltage coincidence: 333
+Energy-deposit coincidence count: 364
