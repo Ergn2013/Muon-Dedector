@@ -1,0 +1,7 @@
+/run/initialize
+/run/verbose 0
+/tracking/verbose 0
+/tracking/storeTrajectory 0
+/vis/disable
+/run/printProgress 100
+/run/beamOn 10000

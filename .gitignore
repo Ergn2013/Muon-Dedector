@@ -14,5 +14,6 @@ electronics/ltspice/testbench/SN74LVC1G08.cir
 simulation/geant4/build*/
 simulation/geant4/CMakeCache.txt
 simulation/geant4/CMakeFiles/
+simulation/geant4/runs/
 
 __pycache__/

@@ -1,0 +1,11 @@
+/run/initialize
+/vis/open OGL 600x600-0+0
+/vis/drawVolume
+/vis/geometry/set/visibility World 0 false
+/vis/geometry/set/colour Scint 0 0 0 1 0.5
+/vis/viewer/set/style surface
+/vis/viewer/set/hiddenMarker true
+/vis/viewer/set/viewpointThetaPhi 75 30
+/vis/viewer/zoom 2.0
+/vis/scene/add/trajectories smooth
+/vis/scene/endOfEventAction accumulate
