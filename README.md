@@ -2,6 +2,8 @@
 
 A two-channel cosmic-ray muon detector prototype developed at Middle East Technical University. Plastic scintillators and photomultiplier tubes (PMTs) provide the signals. The project combines 3D-printed detector mounts, oscilloscope measurements and coincidence electronics for a planned STM32 readout.
 
+**Project team** · Ergün Özakyıldız, Burhan Karaduman, Nazlıcan Yıldırım and Emre Yağız Öztürk
+
 | Section | Start here |
 | --- | --- |
 | [Electronics](electronics/ltspice/README.md) | [Schematic preview](electronics/ltspice/schematic.svg), LTspice setup and four focused test benches |

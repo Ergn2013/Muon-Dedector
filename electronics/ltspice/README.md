@@ -26,6 +26,6 @@ Each PMT channel feeds a TLV3601 discriminator and an SN74LVC2G17 Schmitt-trigge
 | [Channel delay](testbench/03_channel_delay_sweep.asc) | Relative pulse delay between the two PMTs |
 | [Singles and noise-only](testbench/05_single_channel_and_noise_only.asc) | One channel pulsed at a time and a noise-only case |
 
-The tests use synthetic inputs and model the STM32 connections as electrical loads. To count threshold crossings in the generated LTspice output, run `python TOOLS/analyze_outputs.py` from `testbench/`.
+The tests use synthetic inputs and model the STM32 connections as electrical loads. To count threshold crossings in the generated LTspice output, run `python TOOLS/analyze_outputs.py` from `testbench/`. The script writes `edge_counts.csv` and `edge_counts.json`.
 
 [Full development test set in Git history](https://github.com/Ergn2013/Muon-Dedector/tree/ba4f7d2715aff6d7d7e44ef1ddcb9fbe6d40304d/electronics/ltspice)

@@ -119,7 +119,7 @@ def analyse_raw(path,threshold=1.65):
 
 def write_outputs(results,directory):
     directory=Path(directory)
-    (directory/'SAYIM_SONUCLARI.json').write_text(json.dumps(results,ensure_ascii=False,indent=2),encoding='utf-8')
+    (directory/'edge_counts.json').write_text(json.dumps(results,ensure_ascii=False,indent=2),encoding='utf-8')
     rows=[]
     for r in results:
         row={'dosya':r['file'],'adim':r['step'],'ayarlar':json.dumps(r['step_parameters'],ensure_ascii=False),'sayim_esigi_V':r['threshold_v']}
@@ -128,7 +128,7 @@ def write_outputs(results,directory):
         for k,v in r['quiet_rms_v'].items():row[k+'_gurultu_mVrms']=None if v is None else v*1e3
         rows.append(row)
     if rows:
-        with (directory/'SAYIM_SONUCLARI.csv').open('w',encoding='utf-8-sig',newline='') as f:
+        with (directory/'edge_counts.csv').open('w',encoding='utf-8-sig',newline='') as f:
             w=csv.DictWriter(f,fieldnames=list(rows[0]),delimiter=';');w.writeheader();w.writerows(rows)
 
 def main():
@@ -145,6 +145,6 @@ def main():
         print('Okunuyor:',p.name,flush=True)
         results.extend(analyse_raw(p,args.threshold))
     write_outputs(results,root)
-    print('Yazildi: SAYIM_SONUCLARI.csv ve SAYIM_SONUCLARI.json')
+    print('Wrote edge_counts.csv and edge_counts.json.')
     print('Bunlar belirtilen voltaj esigindeki kenar sayilaridir; STM32 donanim/firmware simulasyonu degildir.')
 if __name__=='__main__':main()

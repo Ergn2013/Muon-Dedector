@@ -2,6 +2,8 @@
 electronics/ltspice/testbench/*.raw
 electronics/ltspice/testbench/*.log
 electronics/ltspice/testbench/*.net
+electronics/ltspice/testbench/edge_counts.csv
+electronics/ltspice/testbench/edge_counts.json
 electronics/ltspice/testbench/SAYIM_SONUCLARI.csv
 electronics/ltspice/testbench/SAYIM_SONUCLARI.json
 
